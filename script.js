@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Elements
   const invitationCard = document.getElementById('invitationCard');
   const celebrationView = document.getElementById('celebrationView');
+  const finalView = document.getElementById('finalView');
   const btnYes = document.getElementById('btnYes');
   const btnNo = document.getElementById('btnNo');
   const cuteToast = document.getElementById('cuteToast');
@@ -20,6 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const animatedKrathong = document.getElementById('animatedKrathong');
   const backToCardBtn = document.getElementById('backToCardBtn');
   const wishText = document.getElementById('wishText');
+
+  // Final View Elements
+  const finalTitle = document.getElementById('finalTitle');
+  const finalNamesText = document.getElementById('finalNamesText');
+  const finalWishContent = document.getElementById('finalWishContent');
+  const shareMemoryBtn = document.getElementById('shareMemoryBtn');
+  const restartFlowBtn = document.getElementById('restartFlowBtn');
 
   // Playful Decline Button Messages & Evasion State
   let declineAttempts = 0;
@@ -225,28 +233,80 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Enter') updateCoupleNames();
   });
 
-  // Float Wish Animation
+  // Float Wish Animation & Transition to Final Scene
   floatWishBtn.addEventListener('click', () => {
     initAudio();
     playChime(880, 'sine', 0.6);
     fireConfetti(true);
 
-    const wish = wishText.value.trim();
-    if (wish) {
-      showToast('คำอธิษฐานถูกส่งไปยังดวงจันทร์แล้วน้า 🌕✨');
-    } else {
-      showToast('ปล่อยกระทงเรียบร้อย ขอให้รักกันยืนยาวนะะ 🪷💖');
-    }
+    const coupleNames = coupleNamesInput.value.trim() || 'เราสองคน';
+    const wish = wishText.value.trim() || 'ขอให้เราสองคนมีความสุขและรักกันไปนานๆ นะ...';
 
-    // Animation: krathong gently drifts into the moon distance
-    animatedKrathong.style.transition = 'transform 3.5s ease-in-out, opacity 3.5s ease-in-out';
-    animatedKrathong.style.transform = 'translateY(-35px) translateX(60px) scale(0.65)';
+    // Update Final Scene content
+    finalNamesText.textContent = coupleNames;
+    finalWishContent.textContent = `"${wish}"`;
+    finalTitle.textContent = `${coupleNames} ลอยกระทงด้วยกันแล้วนะ 💕`;
+
+    showToast('คำอธิษฐานส่งถึงดวงจันทร์แล้วน้า 🌕✨');
+
+    // Animation: krathong gently drifts into the distance
+    animatedKrathong.style.transition = 'transform 1.8s ease-in-out, opacity 1.8s ease-in-out';
+    animatedKrathong.style.transform = 'translateY(-30px) translateX(60px) scale(0.65)';
     animatedKrathong.style.opacity = '0.7';
 
+    // Transition smoothly to Final Scene (ชายหญิงลอยกระทงริมน้ำใต้แสงจันทร์และโคมลอย)
     setTimeout(() => {
-      animatedKrathong.style.transform = 'translateY(0) translateX(0) scale(1)';
-      animatedKrathong.style.opacity = '1';
-    }, 4500);
+      celebrationView.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+      celebrationView.style.opacity = '0';
+      celebrationView.style.transform = 'scale(0.92) translateY(-15px)';
+
+      setTimeout(() => {
+        celebrationView.classList.add('hidden');
+        celebrationView.style.opacity = '';
+        celebrationView.style.transform = '';
+        
+        // Reset floating krathong in background for next time
+        animatedKrathong.style.transition = '';
+        animatedKrathong.style.transform = 'translateY(0) translateX(0) scale(1)';
+        animatedKrathong.style.opacity = '1';
+
+        // Show Final Screen
+        finalView.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        playCelebrationFanfare();
+        fireConfetti();
+      }, 400);
+    }, 1200);
+  });
+
+  // Share Memory Button
+  shareMemoryBtn.addEventListener('click', () => {
+    initAudio();
+    playChime(659.25, 'triangle', 0.3);
+
+    const coupleNames = coupleNamesInput.value.trim() || 'เราสองคน';
+    const textToCopy = `🌕 สุขสันต์วันลอยกระทงนะ! ลอยกระทงปีนี้ ${coupleNames} ได้ลอยกระทงด้วยกันแล้วนะ 💕 นัดกันแล้วห้ามเบี้ยวเด็ดขาด! 🥰 https://sirikorn123.github.io/loy-krathong/`;
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        showToast('คัดลอกข้อความแล้ว ส่งให้คนพิเศษได้เลยน้า 💌✨');
+      }).catch(() => {
+        showToast('นัดกันแล้วห้ามเบี้ยวนะคะ ♡ 🌸');
+      });
+    } else {
+      showToast('นัดกันแล้วห้ามเบี้ยวนะคะ ♡ 🌸');
+    }
+  });
+
+  // Restart flow button on final screen
+  restartFlowBtn.addEventListener('click', () => {
+    finalView.classList.add('hidden');
+    invitationCard.style.display = 'flex';
+    setTimeout(() => {
+      invitationCard.style.opacity = '1';
+      invitationCard.style.transform = 'scale(1) translateY(0)';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 50);
   });
 
   // Moon badge click

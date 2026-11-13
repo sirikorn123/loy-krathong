@@ -1,0 +1,351 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="100%" height="100%">
+  <defs>
+    <!-- Sky & Water Gradients -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="45%" stop-color="#1e293b"/>
+      <stop offset="70%" stop-color="#334155"/>
+      <stop offset="85%" stop-color="#58355e"/>
+      <stop offset="100%" stop-color="#8b5266"/>
+    </linearGradient>
+
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e2942"/>
+      <stop offset="30%" stop-color="#152238"/>
+      <stop offset="70%" stop-color="#0f1a2e"/>
+      <stop offset="100%" stop-color="#0a1220"/>
+    </linearGradient>
+
+    <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fffbeb"/>
+      <stop offset="60%" stop-color="#fef08a"/>
+      <stop offset="100%" stop-color="#fde047"/>
+    </linearGradient>
+
+    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fef08a" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#fde047" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#fde047" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="lanternGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffedd5" stop-opacity="0.9"/>
+      <stop offset="30%" stop-color="#f59e0b" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="lanternBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff7ed"/>
+      <stop offset="30%" stop-color="#fef3c7"/>
+      <stop offset="80%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+
+    <linearGradient id="girlSabai" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbcfe8"/>
+      <stop offset="50%" stop-color="#f472b6"/>
+      <stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+
+    <linearGradient id="girlSkirt" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#be185d"/>
+      <stop offset="100%" stop-color="#831843"/>
+    </linearGradient>
+
+    <linearGradient id="boyShirt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0e7ff"/>
+      <stop offset="50%" stop-color="#c7d2fe"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+
+    <linearGradient id="boyChong" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+
+    <!-- Krathong Candle Glow -->
+    <radialGradient id="candleHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="25%" stop-color="#fef08a" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#f97316" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ea580c" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="softBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+
+  <!-- SKY BACKGROUND -->
+  <rect width="800" height="320" fill="url(#skyGrad)"/>
+
+  <!-- STARS -->
+  <g fill="#ffffff" opacity="0.8">
+    <circle cx="80" cy="50" r="1.5"/>
+    <circle cx="150" cy="90" r="1.2"/>
+    <circle cx="230" cy="40" r="1.8"/>
+    <circle cx="340" cy="75" r="1.5"/>
+    <circle cx="480" cy="45" r="1.2"/>
+    <circle cx="560" cy="85" r="1.6"/>
+    <circle cx="680" cy="40" r="1.3"/>
+    <circle cx="750" cy="95" r="1.5"/>
+    <circle cx="110" cy="130" r="1.2"/>
+    <circle cx="410" cy="120" r="1.4"/>
+    <circle cx="640" cy="110" r="1.5"/>
+  </g>
+
+  <!-- FULL MOON WITH HALO -->
+  <circle cx="670" cy="100" r="65" fill="url(#moonGlow)"/>
+  <circle cx="670" cy="100" r="42" fill="url(#moonGrad)" filter="drop-shadow(0 0 16px rgba(254, 240, 138, 0.8))"/>
+  <!-- Subtle Moon Texture -->
+  <ellipse cx="660" cy="92" rx="10" ry="12" fill="#fef9c3" opacity="0.5"/>
+  <ellipse cx="682" cy="112" rx="14" ry="10" fill="#fef9c3" opacity="0.4"/>
+
+  <!-- FLOATING SKY LANTERNS (โคมลอย) -->
+  <!-- Far lanterns -->
+  <g opacity="0.6">
+    <ellipse cx="520" cy="130" rx="7" ry="10" fill="url(#lanternBody)"/>
+    <ellipse cx="440" cy="100" rx="5" ry="8" fill="url(#lanternBody)"/>
+    <ellipse cx="610" cy="60" rx="6" ry="9" fill="url(#lanternBody)"/>
+    <ellipse cx="280" cy="110" rx="6" ry="9" fill="url(#lanternBody)"/>
+    <ellipse cx="190" cy="80" rx="5" ry="8" fill="url(#lanternBody)"/>
+  </g>
+
+  <!-- Mid lanterns with glow -->
+  <g>
+    <!-- Lantern 1 -->
+    <circle cx="580" cy="160" r="22" fill="url(#lanternGlow)"/>
+    <rect x="573" y="150" width="14" height="20" rx="3" fill="url(#lanternBody)"/>
+    <circle cx="580" cy="168" r="3" fill="#ffffff"/>
+
+    <!-- Lantern 2 -->
+    <circle cx="370" cy="140" r="24" fill="url(#lanternGlow)"/>
+    <rect x="362" y="128" width="16" height="22" rx="4" fill="url(#lanternBody)"/>
+    <circle cx="370" cy="148" r="3.5" fill="#ffffff"/>
+
+    <!-- Lantern 3 (Close & high) -->
+    <circle cx="160" cy="100" r="26" fill="url(#lanternGlow)"/>
+    <rect x="151" y="88" width="18" height="25" rx="4" fill="url(#lanternBody)"/>
+    <circle cx="160" cy="110" r="4" fill="#ffffff"/>
+
+    <!-- Lantern 4 -->
+    <circle cx="720" cy="170" r="20" fill="url(#lanternGlow)"/>
+    <rect x="713" y="160" width="14" height="19" rx="3" fill="url(#lanternBody)"/>
+    <circle cx="720" cy="177" r="3" fill="#ffffff"/>
+  </g>
+
+  <!-- DISTANT SILHOUETTE (Thai temple spire & palm trees) -->
+  <g fill="#172237" opacity="0.85">
+    <!-- Temple Pagoda (สถูปเจดีย์) -->
+    <path d="M 680 320 L 684 270 L 687 230 L 688 210 L 689 210 L 690 230 L 693 270 L 697 320 Z"/>
+    <ellipse cx="688" cy="275" rx="8" ry="4"/>
+    <ellipse cx="688" cy="295" rx="14" ry="5"/>
+    <ellipse cx="688" cy="315" rx="20" ry="6"/>
+    <!-- Distant hills & foliage -->
+    <path d="M 0 320 Q 80 300 160 320 Q 240 295 320 320 Q 420 305 520 320 Q 620 295 720 320 L 800 320 L 800 330 L 0 330 Z"/>
+    <!-- Coconut trees -->
+    <path d="M 600 320 Q 608 280 618 245" stroke="#172237" stroke-width="3" fill="none"/>
+    <path d="M 618 245 Q 600 235 590 248 M 618 245 Q 612 230 610 220 M 618 245 Q 630 230 642 235 M 618 245 Q 635 245 645 255 M 618 245 Q 615 255 605 262" stroke="#172237" stroke-width="2.5" fill="none"/>
+  </g>
+
+  <!-- WATER (แม่น้ำ) -->
+  <rect y="310" width="800" height="210" fill="url(#waterGrad)"/>
+
+  <!-- Water Moonlight Reflection -->
+  <g opacity="0.35">
+    <ellipse cx="670" cy="335" rx="45" ry="3" fill="#fef08a"/>
+    <ellipse cx="668" cy="355" rx="55" ry="4" fill="#fef08a"/>
+    <ellipse cx="672" cy="380" rx="40" ry="3" fill="#fef08a"/>
+    <ellipse cx="665" cy="410" rx="65" ry="4" fill="#fef08a"/>
+    <ellipse cx="670" cy="445" rx="50" ry="3.5" fill="#fef08a"/>
+  </g>
+
+  <!-- Water Gentle Ripples -->
+  <g stroke="#38bdf8" stroke-width="1.2" opacity="0.35" fill="none">
+    <path d="M 50 350 Q 90 348 130 350"/>
+    <path d="M 220 370 Q 280 367 340 370"/>
+    <path d="M 120 400 Q 180 398 240 400"/>
+    <path d="M 450 360 Q 520 358 590 360"/>
+    <path d="M 550 400 Q 620 398 690 400"/>
+    <path d="M 300 450 Q 380 447 460 450"/>
+  </g>
+
+  <!-- RIVERSIDE BANK (ตลิ่งริมแม่น้ำ) -->
+  <path d="M 0 520 L 0 410 Q 120 415 260 435 Q 400 450 560 480 Q 680 500 800 520 Z" fill="#1b281f"/>
+  <path d="M 0 520 L 0 420 Q 110 423 240 442 Q 380 458 520 488 Q 650 508 800 520 Z" fill="#2d422a"/>
+
+  <!-- Soft Grass & Lotus decor on bank -->
+  <g fill="#4ade80" opacity="0.7">
+    <path d="M 40 422 Q 45 408 48 402 Q 52 414 55 423 Z"/>
+    <path d="M 52 423 Q 58 405 64 400 Q 66 412 68 424 Z"/>
+    <path d="M 180 438 Q 184 425 188 418 Q 192 428 195 439 Z"/>
+    <path d="M 240 446 Q 245 430 252 422 Q 256 435 259 448 Z"/>
+  </g>
+
+  <!-- ======================================================================
+       CHARACTERS: CUTE CHIBI/ANIME COUPLE IN PASTEL THAI ATTIRE
+       ====================================================================== -->
+  
+  <g id="coupleGroup" transform="translate(140, 240)">
+    
+    <!-- BOY (LEFT) -->
+    <g id="boyChar">
+      <!-- Shadow -->
+      <ellipse cx="140" cy="225" rx="45" ry="14" fill="#0b130e" opacity="0.5"/>
+
+      <!-- Legs / Kneeling Chong Kraben (โจงกระเบนสีน้ำเงินคราม) -->
+      <path d="M 100 170 Q 90 205 105 220 Q 140 225 175 220 Q 190 205 180 170 Z" fill="url(#boyChong)"/>
+      <!-- Gold Sash Belt -->
+      <path d="M 102 170 Q 140 178 178 170 L 176 177 Q 140 185 104 177 Z" fill="#f59e0b"/>
+
+      <!-- Body / Thai Raj Pattern Top (เสื้อราชปะแตนสีฟ้าพาสเทล) -->
+      <path d="M 105 125 Q 95 145 102 172 Q 140 176 178 172 Q 185 145 175 125 Z" fill="url(#boyShirt)"/>
+      <!-- Gold buttons & collar -->
+      <path d="M 130 115 Q 140 118 150 115 L 149 122 Q 140 124 131 122 Z" fill="#fbbf24"/>
+      <circle cx="140" cy="133" r="2.2" fill="#fbbf24"/>
+      <circle cx="140" cy="145" r="2.2" fill="#fbbf24"/>
+      <circle cx="140" cy="157" r="2.2" fill="#fbbf24"/>
+
+      <!-- Left Arm reaching forward to Krathong -->
+      <path d="M 105 135 Q 115 160 145 175 Q 155 180 168 185" stroke="url(#boyShirt)" stroke-width="15" stroke-linecap="round" fill="none"/>
+      <!-- Boy Hand -->
+      <circle cx="174" cy="187" r="7.5" fill="#fde2d6"/>
+
+      <!-- Head / Neck -->
+      <rect x="133" y="105" width="14" height="15" rx="5" fill="#fde2d6"/>
+      <circle cx="140" cy="85" r="30" fill="#fde2d6"/>
+
+      <!-- Cute Anime Face (Boy) -->
+      <!-- Blushing Cheeks -->
+      <ellipse cx="123" cy="94" rx="6" ry="3.5" fill="#fca5a5" opacity="0.75"/>
+      <ellipse cx="157" cy="94" rx="6" ry="3.5" fill="#fca5a5" opacity="0.75"/>
+      <!-- Happy Closed Eyes (Cute Arc ^_^) -->
+      <path d="M 120 86 Q 126 80 132 86" stroke="#4a2818" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+      <path d="M 148 86 Q 154 80 160 86" stroke="#4a2818" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+      <!-- Sweet Smile -->
+      <path d="M 135 96 Q 140 102 145 96" stroke="#c2410c" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+
+      <!-- Boy Hair (Soft Brown Anime Cut) -->
+      <path d="M 110 82 Q 112 56 140 55 Q 168 56 170 82 Q 172 88 168 95 Q 166 84 162 76 Q 152 70 140 70 Q 128 70 118 76 Q 114 84 112 95 Z" fill="#5c3826"/>
+      <!-- Bangs -->
+      <path d="M 118 74 Q 128 85 133 76 Q 140 88 147 75 Q 154 85 162 74" fill="#5c3826"/>
+    </g>
+
+    <!-- GIRL (RIGHT) -->
+    <g id="girlChar">
+      <!-- Shadow -->
+      <ellipse cx="240" cy="225" rx="45" ry="14" fill="#0b130e" opacity="0.5"/>
+
+      <!-- Kneeling Long Skirt / Pha Sin (ผ้าซิ่นสีแดงเบอร์กันดี/ชมพูเข้ม) -->
+      <path d="M 205 170 Q 195 205 210 220 Q 240 225 275 220 Q 290 205 280 170 Z" fill="url(#girlSkirt)"/>
+      <!-- Gold Embroidered Hem -->
+      <path d="M 206 215 Q 240 222 278 215 L 276 220 Q 240 226 208 220 Z" fill="#fbbf24"/>
+
+      <!-- Body / Thai Sabai Drape (สไบสีชมพูพาสเทลพาดไหล่) -->
+      <path d="M 205 125 Q 198 145 204 172 Q 240 176 276 172 Q 282 145 275 125 Z" fill="#fff1f2"/>
+      <!-- Diagonal Sabai drape -->
+      <path d="M 215 122 Q 235 140 248 180 L 235 182 Q 220 145 205 130 Z" fill="url(#girlSabai)"/>
+      <path d="M 248 180 Q 255 205 262 225 L 254 226 Q 247 205 240 182 Z" fill="url(#girlSabai)"/>
+      <!-- Gold Brooch on Sabai -->
+      <circle cx="218" cy="132" r="3.5" fill="#f59e0b"/>
+      <circle cx="218" cy="132" r="1.8" fill="#fef08a"/>
+
+      <!-- Hands reaching forward together to Krathong -->
+      <path d="M 255 140 Q 245 162 225 178 Q 215 182 202 185" stroke="#fce7f3" stroke-width="13" stroke-linecap="round" fill="none"/>
+      <!-- Girl Hand -->
+      <circle cx="196" cy="187" r="7" fill="#fde2d6"/>
+
+      <!-- Head / Neck -->
+      <rect x="233" y="105" width="14" height="15" rx="5" fill="#fde2d6"/>
+      <circle cx="240" cy="85" r="29" fill="#fde2d6"/>
+
+      <!-- Cute Anime Face (Girl) -->
+      <!-- Blushing Cheeks -->
+      <ellipse cx="223" cy="94" rx="6" ry="3.5" fill="#f472b6" opacity="0.8"/>
+      <ellipse cx="257" cy="94" rx="6" ry="3.5" fill="#f472b6" opacity="0.8"/>
+      <!-- Happy Smiling Eyes (Cute Arc with eyelashes) -->
+      <path d="M 220 86 Q 226 80 232 86" stroke="#4a2818" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+      <path d="M 218 84 L 215 81" stroke="#4a2818" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M 248 86 Q 254 80 260 86" stroke="#4a2818" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+      <path d="M 262 84 L 265 81" stroke="#4a2818" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Sweet Smile -->
+      <path d="M 235 96 Q 240 102 245 96" stroke="#db2777" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+
+      <!-- Girl Hair (Dark Brown / Flowing with cute Chignon Bun & Flower) -->
+      <path d="M 210 82 Q 212 55 240 54 Q 268 55 270 82 Q 272 90 268 115 Q 262 90 260 76 Q 250 68 240 68 Q 230 68 220 76 Q 216 90 212 115 Z" fill="#3b2317"/>
+      <!-- Side bangs -->
+      <path d="M 216 75 Q 226 84 233 77 Q 240 85 247 77 Q 254 84 264 75" fill="#3b2317"/>
+      <!-- Hair Bun with Pink Lotus Flower Pin -->
+      <circle cx="266" cy="62" r="14" fill="#3b2317"/>
+      <!-- Pink Flower Pin (ดอกบัวทัดหู) -->
+      <g transform="translate(258, 66)">
+        <ellipse cx="0" cy="0" rx="4.5" ry="7" fill="#f472b6" transform="rotate(0)"/>
+        <ellipse cx="0" cy="0" rx="4.5" ry="7" fill="#f472b6" transform="rotate(45)"/>
+        <ellipse cx="0" cy="0" rx="4.5" ry="7" fill="#f472b6" transform="rotate(90)"/>
+        <ellipse cx="0" cy="0" rx="4.5" ry="7" fill="#f472b6" transform="rotate(135)"/>
+        <circle cx="0" cy="0" r="2.5" fill="#fde047"/>
+      </g>
+    </g>
+
+    <!-- ====================================================================
+         THE KRATHONG (BETWEEN THEM IN WATER / AT HANDS)
+         ==================================================================== -->
+    <g id="krathongItem" transform="translate(185, 185)">
+      <!-- Candle Glow in Water Reflection -->
+      <circle cx="0" cy="22" r="35" fill="url(#candleHalo)" opacity="0.65"/>
+      <ellipse cx="0" cy="24" rx="40" ry="10" stroke="#fde047" stroke-width="1.5" fill="none" opacity="0.7"/>
+
+      <!-- Banana Leaf Base (กระทงใบตอง) -->
+      <ellipse cx="0" cy="18" rx="36" ry="14" fill="#15803d"/>
+      <ellipse cx="0" cy="15" rx="34" ry="12" fill="#22c55e"/>
+
+      <!-- Lotus Petals (กลีบดอกบัวสีชมพูบานสะพรั่ง) -->
+      <g fill="#f472b6">
+        <path d="M -30 14 Q -35 4 -28 -2 Q -22 6 -20 14 Z"/>
+        <path d="M -20 15 Q -22 0 -14 -6 Q -8 5 -8 15 Z"/>
+        <path d="M -10 16 Q -8 -2 0 -10 Q 8 -2 10 16 Z" fill="#fb7185"/>
+        <path d="M 8 15 Q 8 5 14 -6 Q 22 0 20 15 Z"/>
+        <path d="M 20 14 Q 22 6 28 -2 Q 35 4 30 14 Z"/>
+      </g>
+      <!-- Inner Golden Flower Center -->
+      <ellipse cx="0" cy="12" rx="20" ry="7" fill="#fef08a"/>
+      <g fill="#f59e0b">
+        <circle cx="-10" cy="12" r="2.5"/>
+        <circle cx="-5" cy="13" r="2.5"/>
+        <circle cx="0" cy="12" r="2.8"/>
+        <circle cx="5" cy="13" r="2.5"/>
+        <circle cx="10" cy="12" r="2.5"/>
+      </g>
+
+      <!-- Incense Sticks (ธูป 3 ดอก) -->
+      <line x1="-3" y1="10" x2="-6" y2="-12" stroke="#b45309" stroke-width="1.5"/>
+      <line x1="0" y1="10" x2="0" y2="-14" stroke="#b45309" stroke-width="1.5"/>
+      <line x1="3" y1="10" x2="6" y2="-12" stroke="#b45309" stroke-width="1.5"/>
+      <!-- Incense Ember Tips -->
+      <circle cx="-6" cy="-12" r="1.2" fill="#ef4444"/>
+      <circle cx="0" cy="-14" r="1.2" fill="#ef4444"/>
+      <circle cx="6" cy="-12" r="1.2" fill="#ef4444"/>
+
+      <!-- Yellow Candle (เทียนไข) -->
+      <rect x="-3" y="-6" width="6" height="17" rx="1.5" fill="#fef08a" stroke="#ca8a04" stroke-width="0.8"/>
+      <!-- Candle Flame & Warm Halo -->
+      <circle cx="0" cy="-14" r="16" fill="url(#candleHalo)"/>
+      <path d="M 0 -22 Q 4 -15 3 -10 Q 0 -6 -3 -10 Q -4 -15 0 -22 Z" fill="#ffffff"/>
+      <path d="M 0 -20 Q 3 -14 2 -10 Q 0 -7 -2 -10 Q -3 -14 0 -20 Z" fill="#fde047"/>
+      <path d="M 0 -17 Q 2 -13 1 -10 Q 0 -8 -1 -10 Q -2 -13 0 -17 Z" fill="#ea580c"/>
+    </g>
+
+    <!-- Floating Sparkles around Couple -->
+    <g fill="#fef08a" opacity="0.85">
+      <!-- 4-point sparkle stars -->
+      <path d="M 70 120 Q 75 120 75 115 Q 75 120 80 120 Q 75 120 75 125 Q 75 120 70 120 Z" fill="#ffd166"/>
+      <path d="M 290 110 Q 295 110 295 105 Q 295 110 300 110 Q 295 110 295 115 Q 295 110 290 110 Z" fill="#ffd166"/>
+      <path d="M 185 130 Q 188 130 188 127 Q 188 130 191 130 Q 188 130 188 133 Q 188 130 185 130 Z" fill="#ff70a6"/>
+    </g>
+
+  </g>
+
+  <!-- Sweet Heart & Flower Accents -->
+  <text x="320" y="240" font-size="20" opacity="0.85">✨</text>
+  <text x="470" y="235" font-size="18" opacity="0.85">💕</text>
+</svg>

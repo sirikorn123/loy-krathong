@@ -74,12 +74,8 @@
           <div class="main-heading-group">
             <div class="star-accent star-left">✦</div>
             <div class="heading-lines">
-              <h1 class="heading-line-1">
-                <span class="heart-icon">💖</span> ไปลอยกระทง <span class="heart-icon">💖</span>
-              </h1>
-              <h2 class="heading-line-2">
-                ด้วยกันไหม? <span class="flower-icon">🌸</span>
-              </h2>
+              <h1 class="heading-line-1">ไปลอยกระทง</h1>
+              <h2 class="heading-line-2">ด้วยกันไหม?</h2>
             </div>
             <div class="star-accent star-right">✦</div>
           </div>
@@ -169,7 +165,7 @@
             <label for="coupleNames" class="wish-label">✍️ ใส่ชื่อคู่ของเราบนกระทง:</label>
             <div class="input-row">
               <input type="text" id="coupleNames" class="custom-input" placeholder="เช่น เค้า & เธอ" maxlength="25">
-              <button class="btn btn-small" id="updateNamesBtn">บันทึกชื่อ 🌸</button>
+              <button class="btn btn-small" id="updateNamesBtn">บันทึกชื่อ</button>
             </div>
 
             <label for="wishText" class="wish-label" style="margin-top: 10px;">🌟 คำอธิษฐานวันลอยกระทง:</label>
@@ -182,6 +178,55 @@
             </button>
             <button class="btn btn-outline" id="backToCardBtn">
               ดูการ์ดชวนอีกครั้ง 💌
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL VIEW: ชายหญิงลอยกระทงด้วยกันริมแม่น้ำ ตัวการ์ตูนน่ารักและโคมลอย -->
+    <section class="final-screen hidden" id="finalView">
+      <div class="final-card">
+        <div class="final-inner">
+          <div class="final-badge">🌕 บันทึกคืนวันลอยกระทงของเรา 🌸</div>
+          
+          <h2 class="final-title" id="finalTitle">เราสองคนลอยกระทงด้วยกันแล้วนะ 💕</h2>
+
+          <!-- Beautiful Illustration Frame: Couple floating Krathong -->
+          <div class="final-image-frame">
+            <img 
+              src="photo/couple-krathong.svg" 
+              alt="ภาพคู่รักชายหญิงใส่ชุดไทยน่ารักลอยกระทงริมแม่น้ำใต้แสงจันทร์และโคมลอย" 
+              class="couple-krathong-art"
+              id="coupleKrathongImg"
+            >
+            <div class="image-lantern-overlay">
+              <span class="fly-lantern fl-1">🏮</span>
+              <span class="fly-lantern fl-2">🏮</span>
+              <span class="fly-lantern fl-3">🏮</span>
+            </div>
+          </div>
+
+          <!-- Display Couple's Names & Wish -->
+          <div class="final-wish-summary">
+            <div class="final-couple-tag" id="finalCoupleTag">
+              ✨ <span id="finalNamesText">เราสองคน</span> ✨
+            </div>
+            <p class="final-wish-content" id="finalWishContent">
+              "ขอให้เราสองคนมีความสุขและรักกันไปนานๆ นะ..."
+            </p>
+          </div>
+
+          <p class="final-blessing-note">
+            กระทงได้ลอยออกสู่สายน้ำและคำอธิษฐานส่งถึงดวงจันทร์แล้วน้า ขอบคุณที่มาลอยกระทงด้วยกันนะคนดี 🥰✨
+          </p>
+
+          <div class="final-actions">
+            <button class="btn btn-accept" id="shareMemoryBtn">
+              คัดลอกข้อความบอกรักส่งให้เธอ 💌
+            </button>
+            <button class="btn btn-outline" id="restartFlowBtn">
+              กลับไปดูการ์ดชวน 🌸
             </button>
           </div>
         </div>
