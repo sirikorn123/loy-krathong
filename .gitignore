@@ -1,0 +1,11 @@
+# OS metadata
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Temporary reference screenshots (keep only active photo/rabbit-cat.png)
+photo/Screenshot*
+photo/reference*
+photo/illustration_cropped*
+photo/rabbit-cat-transparent*

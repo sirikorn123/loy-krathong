@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>ไปลอยกระทงด้วยกันไหม? 💖 บันทึกวันลอยกระทงของเรา</title>
+  
+  <!-- Google Fonts: Mali (Cute rounded handwriting for Thai), Quicksand, Itim -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&family=Mali:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Prompt:wght@300;400;500;600&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Sky Elements (Floating Lanterns, Sparkles, Floating Petals) -->
+  <div class="sky-background" id="skyBg">
+    <!-- Floating lanterns (โคมลอย) -->
+    <div class="lantern lantern-1">
+      <div class="lantern-glow"></div>
+      <div class="lantern-body"></div>
+    </div>
+    <div class="lantern lantern-2">
+      <div class="lantern-glow"></div>
+      <div class="lantern-body"></div>
+    </div>
+    <div class="lantern lantern-3">
+      <div class="lantern-glow"></div>
+      <div class="lantern-body"></div>
+    </div>
+    <div class="lantern lantern-4">
+      <div class="lantern-glow"></div>
+      <div class="lantern-body"></div>
+    </div>
+    
+    <!-- Sparkles & Stars -->
+    <div class="star-sparkle star-1">✦</div>
+    <div class="star-sparkle star-2">✦</div>
+    <div class="star-sparkle star-3">✦</div>
+    <div class="star-sparkle star-4">✧</div>
+    <div class="star-sparkle star-5">🌸</div>
+    <div class="star-sparkle star-6">✦</div>
+    <div class="star-sparkle star-7">🌸</div>
+  </div>
+
+  <!-- Music toggle button in corner -->
+  <button class="bgm-toggle" id="bgmToggle" title="เปิด/ปิดเสียงดนตรีน่ารัก">
+    <span id="bgmIcon">🎵</span>
+  </button>
+
+  <!-- Main View Container -->
+  <main class="page-container">
+    
+    <!-- INVITATION CARD (Matches exact reference design) -->
+    <div class="card-wrapper" id="invitationCard">
+      <div class="card">
+        <!-- Inner dashed stitch border -->
+        <div class="card-inner">
+          
+          <!-- Top Bar: Pink round badge 'm' + Header title -->
+          <div class="card-header">
+            <div class="brand-badge">m</div>
+            <div class="invitation-tag">♡ A SPECIAL INVITATION FOR YOU ♡</div>
+          </div>
+
+          <!-- Sub-header -->
+          <div class="diary-subtitle">
+            <span class="dash">—</span>
+            <span>บันทึกวันลอยกระทงของเรา</span>
+            <span class="dash">—</span>
+          </div>
+
+          <!-- Main Heading -->
+          <div class="main-heading-group">
+            <div class="star-accent star-left">✦</div>
+            <div class="heading-lines">
+              <h1 class="heading-line-1">
+                <span class="heart-icon">💖</span> ไปลอยกระทง <span class="heart-icon">💖</span>
+              </h1>
+              <h2 class="heading-line-2">
+                ด้วยกันไหม? <span class="flower-icon">🌸</span>
+              </h2>
+            </div>
+            <div class="star-accent star-right">✦</div>
+          </div>
+
+          <!-- Cute Sub-caption -->
+          <p class="emotional-caption">
+            ปีนี้อยากไปลอยกับเธอที่สุดเลยนะ 🥺✨
+          </p>
+
+          <!-- Illustration Area: Rabbit in pink Sabai & Cat holding Krathong -->
+          <div class="illustration-container">
+            <div class="illustration-sparkles">
+              <span class="mini-sparkle sp-1">✦</span>
+              <span class="mini-sparkle sp-2">💖</span>
+              <span class="mini-sparkle sp-3">✨</span>
+              <span class="mini-sparkle sp-4">🌸</span>
+            </div>
+            <img 
+              src="photo/rabbit-cat.png" 
+              alt="น้องกระต่ายและน้องแมวลอยกระทงด้วยกัน" 
+              class="illustration-img"
+              id="mainIllustration"
+            >
+          </div>
+
+          <!-- Interactive Action Buttons -->
+          <div class="actions-group">
+            <!-- Accept Button with little sparkle badge -->
+            <div class="accept-btn-wrapper">
+              <span class="btn-sparkle-deco">✨</span>
+              <button class="btn btn-accept" id="btnYes">
+                ไปเยย! 💖
+              </button>
+            </div>
+
+            <!-- Decline / Playful dodge button -->
+            <button class="btn btn-decline" id="btnNo">
+              ไม่ไปง่ะ 🥺
+            </button>
+          </div>
+
+          <!-- Footer note inside card -->
+          <div class="card-footer">
+            <span class="footer-heart">♥</span>
+            <span class="footer-text">นัดกันแล้วห้ามเบี้ยวนะคะ ♡</span>
+            <span class="footer-heart">♥</span>
+          </div>
+
+        </div><!-- /.card-inner -->
+      </div><!-- /.card -->
+
+      <!-- Cute smiling moon / emoji badge at bottom -->
+      <div class="bottom-moon-badge" id="moonBadge" title="ยิ้มให้เธอ">
+        <span class="moon-face">😊</span>
+      </div>
+    </div><!-- /.card-wrapper -->
+
+    <!-- CELEBRATION VIEW (Opens when 'ไปเยย!' is clicked) -->
+    <section class="celebration-screen hidden" id="celebrationView">
+      <div class="celebration-card">
+        <div class="celebration-inner">
+          <div class="celebration-badge">🎉 PROMISE ACCEPTED! 💕</div>
+          
+          <h2 class="celebration-title">เย้ๆๆ! ตกลงแล้วน้าาา 🥰✨</h2>
+          <p class="celebration-subtitle">
+            บันทึกไว้ในหัวใจแล้ว ลอยกระทงปีนี้เราจะไปด้วยกัน 🌸💖
+          </p>
+
+          <!-- River Krathong Animation Area -->
+          <div class="river-stage">
+            <div class="night-moon">🌕</div>
+            <div class="river-water">
+              <div class="water-ripple ripple-1"></div>
+              <div class="water-ripple ripple-2"></div>
+              
+              <!-- Floating Krathong with candle flame -->
+              <div class="floating-krathong" id="animatedKrathong">
+                <div class="candle-flame"></div>
+                <div class="krathong-art">🪷</div>
+                <div class="krathong-names" id="displayNames">เราสองคน 💕</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Wish / Name customization -->
+          <div class="wish-box">
+            <label for="coupleNames" class="wish-label">✍️ ใส่ชื่อคู่ของเราบนกระทง:</label>
+            <div class="input-row">
+              <input type="text" id="coupleNames" class="custom-input" placeholder="เช่น เค้า & เธอ" maxlength="25">
+              <button class="btn btn-small" id="updateNamesBtn">บันทึกชื่อ 🌸</button>
+            </div>
+
+            <label for="wishText" class="wish-label" style="margin-top: 10px;">🌟 คำอธิษฐานวันลอยกระทง:</label>
+            <textarea id="wishText" class="custom-textarea" rows="2" placeholder="ขอให้เราสองคนรักกันนานๆ มีความสุขไปด้วยกันทุกวันนะ..."></textarea>
+          </div>
+
+          <div class="celebration-actions">
+            <button class="btn btn-accept" id="floatWishBtn">
+              ปล่อยกระทงอธิษฐาน 🌊✨
+            </button>
+            <button class="btn btn-outline" id="backToCardBtn">
+              ดูการ์ดชวนอีกครั้ง 💌
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Canvas for heart/confetti explosion -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <!-- Sweet Toast Notifications for playful button clicks -->
+  <div class="cute-toast" id="cuteToast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
